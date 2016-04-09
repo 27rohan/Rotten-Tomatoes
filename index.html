@@ -178,6 +178,18 @@ div#notebook {
 </div>
 </div>
 </div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Introduction-to-the-assignment">Introduction to the assignment<a class="anchor-link" href="#Introduction-to-the-assignment">&#182;</a></h2><p>In this assignment, I'll be analyzing movie reviews in an attempt to determine whether movies are good or bad.  I've downloaded a large number of movie reviews from the <a href="http://www.rottentomatoes.com">Rotten Tomatoes</a> website.  Also fetched is a file "movies.dat" that contains metadata for ~65,000 different movies</p>
+<p>If you've never seen Rotten Tomatoes before, go spend a few minutes familiarizing yourself with the website.  It's a meta-review website that aggregates movie reviews from a large number of critics.  Here's what the page for this year's likely <a href="http://www.rottentomatoes.com/m/the_revenant_2015/">Oscar winner</a> looks like.  Note in particular the section on "Critic Reviews" at the bottom -- that's the content that has been scraped and put in the reviews.csv file.  Also note that each movie is given a quantitative score on the Tomatometer which is used to classify the movie as either Fresh (good) or Rotten (bad).</p>
+<p>The mission is to develop a classifier to determine whether a movie is Fresh or Rotten based on the contents of the reviews given to the movie.  As usual, we'll start out with some exploratory data analysis.</p>
+<h4 id="Author---Rohan-Manoj-Thakkar">Author - Rohan Manoj Thakkar<a class="anchor-link" href="#Author---Rohan-Manoj-Thakkar">&#182;</a></h4>
+</div>
+</div>
+</div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 <div class="prompt input_prompt">In&nbsp;[1]:</div>
@@ -203,18 +215,6 @@ div#notebook {
 </div>
 </div>
 
-</div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Introduction-to-the-assignment">Introduction to the assignment<a class="anchor-link" href="#Introduction-to-the-assignment">&#182;</a></h2><p>In this assignment, I'll be analyzing movie reviews in an attempt to determine whether movies are good or bad.  I've downloaded a large number of movie reviews from the <a href="http://www.rottentomatoes.com">Rotten Tomatoes</a> website.  Also fetched is a file "movies.dat" that contains metadata for ~65,000 different movies</p>
-<p>If you've never seen Rotten Tomatoes before, go spend a few minutes familiarizing yourself with the website.  It's a meta-review website that aggregates movie reviews from a large number of critics.  Here's what the page for this year's likely <a href="http://www.rottentomatoes.com/m/the_revenant_2015/">Oscar winner</a> looks like.  Note in particular the section on "Critic Reviews" at the bottom -- that's the content that has been scraped and put in the reviews.csv file.  Also note that each movie is given a quantitative score on the Tomatometer which is used to classify the movie as either Fresh (good) or Rotten (bad).</p>
-<p>The mission is to develop a classifier to determine whether a movie is Fresh or Rotten based on the contents of the reviews given to the movie.  As usual, we'll start out with some exploratory data analysis.</p>
-
-</div>
-</div>
 </div>
 <div class="cell border-box-sizing text_cell rendered">
 <div class="prompt input_prompt">
@@ -2170,8 +2170,8 @@ Words for each feature:
 
 <div class="output_area"><div class="prompt"></div>
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>Performance of training set is = 92.4284578696 %
-Performance of test set is = 76.5424739195 %
+<pre>Performance of training set is = 92.2992845787 %
+Performance of test set is = 77.8539493294 %
 </pre>
 </div>
 </div>
@@ -2230,8 +2230,8 @@ Performance of test set is = 76.5424739195 %
 
 <div class="output_area"><div class="prompt"></div>
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>Log likelihood of train is = -1915.57324107
-Log likelihood of test is = -1933.17554661
+<pre>Log likelihood of train is = -1884.1612637
+Log likelihood of test is = -1933.3421401
 </pre>
 </div>
 </div>
@@ -2370,8 +2370,8 @@ which settings are "best" in the sense of maximizing the cross-validated log-lik
 
 <div class="output_area"><div class="prompt"></div>
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>Performance of training set is = 78.7360890302 %
-Performance of test set is = 73.8897168405 %
+<pre>Performance of training set is = 78.8155802862 %
+Performance of test set is = 75.0819672131 %
 </pre>
 </div>
 </div>
@@ -2399,8 +2399,8 @@ Performance of test set is = 73.8897168405 %
 
 <div class="output_area"><div class="prompt"></div>
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>-4478.81713906
--1818.64201834
+<pre>-4485.88517744
+-1738.46727522
 </pre>
 </div>
 </div>
@@ -2503,8 +2503,8 @@ Performance of test set is = 73.8897168405 %
 
 <div class="output_area"><div class="prompt"></div>
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>Performance of training set is = 62.8577106518 %
-Performance of test set is = 61.6989567809 %
+<pre>Performance of training set is = 62.8875198728 %
+Performance of test set is = 61.5499254844 %
 </pre>
 </div>
 </div>
@@ -2594,29 +2594,29 @@ Performance of test set is = 61.6989567809 %
 <div class="output_subarea output_stream output_stdout output_text">
 <pre>Positive review -
    probability           word
-0     0.095678    masterpiece
-1     0.106365        delight
-2     0.134206       touching
-3     0.136964  extraordinary
-4     0.139189          witty
-5     0.140642         moving
-6     0.141021     remarkable
-7     0.142073    intelligent
-8     0.142834        complex
-9     0.143862         superb
+0     0.104114    masterpiece
+1     0.111695           rare
+2     0.114701        delight
+3     0.121858          gives
+4     0.125732         moving
+5     0.134555     remarkable
+6     0.137778       touching
+7     0.141158       funniest
+8     0.141474  entertainment
+9     0.141474    intelligent
 
 Negative review-
    probability            word
-0     0.764011        tiresome
-1     0.764011         tedious
-2     0.769197   disappointing
-3     0.783473      uninspired
-4     0.784951  disappointment
-5     0.792048            dull
-6     0.799970            lame
-7     0.810782           bland
-8     0.814131       pointless
-9     0.869544   unfortunately
+0     0.775359           sadly
+1     0.776562       formulaic
+2     0.778539  disappointment
+3     0.781352            dull
+4     0.786108         unfunny
+5     0.798874           bland
+6     0.808376      uninspired
+7     0.821494       pointless
+8     0.838117            lame
+9     0.861725   unfortunately
 </pre>
 </div>
 </div>
@@ -2694,26 +2694,26 @@ Negative review-
 <div class="output_subarea output_stream output_stdout output_text">
 <pre>Mismatched quotes in rotten category:
 
-1. This pacifist spirit of brotherhood echoes the heroics in Princess Mononoke and other anime titles, but the artistic gap between the Miyazaki masterpiece and this project is huge.
+1. It survives today only as an unusually pure example of a typical 50s art-film strategy: the attempt to make the most modern and most popular of art forms acceptable to the intelligentsia by forcing it into an arcane, antique mold.
 
-2. It survives today only as an unusually pure example of a typical 50s art-film strategy: the attempt to make the most modern and most popular of art forms acceptable to the intelligentsia by forcing it into an arcane, antique mold.
+2. It&apos;s a sad day when an actor who&apos;s totally, beautifully in touch with his dark side finds himself stuck in a movie that&apos;s scared of its own shadow.
 
-3. Walken is one of the few undeniably charismatic male villains of recent years; he can generate a snakelike charm that makes his worst characters the most memorable, and here he operates on pure style.
+3. The Disney organization is worst when it makes &quot;family entertainment&quot; and best when it sticks to pure, simple, charming fantasy.
 
-4. It&apos;s a sad day when an actor who&apos;s totally, beautifully in touch with his dark side finds himself stuck in a movie that&apos;s scared of its own shadow.
+4. Walken is one of the few undeniably charismatic male villains of recent years; he can generate a snakelike charm that makes his worst characters the most memorable, and here he operates on pure style.
 
-5. The Disney organization is worst when it makes &quot;family entertainment&quot; and best when it sticks to pure, simple, charming fantasy.
+5. The Waterboy is arguably Sandler&apos;s most enjoyable motion picture to date, but it&apos;s still far from a masterpiece.
 
 
 Mismatched quotes in fresh category:
 
-1. There&apos;s too much talent and too strong a story to mess it up. There was potential for more here, but this incarnation is nothing to be ashamed of, and some of the actors answer the bell.
+1. Dead Man Walking could easily be manipulative or exploitative, but it&apos;s neither. Instead, this is hard-hitting drama that neither accepts nor offers quarter.
 
-2. A kind of insane logic seems to connect the sketches, if you look hard enough, but mostly the movie seems to exist in the present and be willing to try anything for a laugh.
+2. Might it be a serious attempt to right some unretrievable wrong via gallows humor which avoids the polemics? This seems to be the course taken; the attempt at least can be respected in theory.
 
-3. Might it be a serious attempt to right some unretrievable wrong via gallows humor which avoids the polemics? This seems to be the course taken; the attempt at least can be respected in theory.
+3. There&apos;s too much talent and too strong a story to mess it up. There was potential for more here, but this incarnation is nothing to be ashamed of, and some of the actors answer the bell.
 
-4. The gangland plot is flimsy (bad guy Peter Greene wears too much eyeliner), and the jokes are erratic, but it&apos;s a far better showcase for Carrey&apos;s comic-from-Uranus talent than Ace Ventura.
+4. Though it&apos;s a good half hour too long, this overblown 1993 spin-off of the 60s TV show otherwise adds up to a pretty good suspense thriller.
 
 5. Some of the gags don&apos;t work, but fewer than in any previous Brooks film that I&apos;ve seen, and when the jokes are meant to be bad, they are riotously poor. What more can one ask of Mel Brooks?
 
@@ -2778,7 +2778,7 @@ C:\Users\rohan27\Anaconda2\lib\site-packages\ipykernel\__main__.py:28: FutureWar
 
 <div class="output_area"><div class="prompt"></div>
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>Freshness probability of the string &quot; This movie is not remarkable, touching, or superb in any way &quot; is 0.0202856522847
+<pre>Freshness probability of the string &quot; This movie is not remarkable, touching, or superb in any way &quot; is 0.0196337756066
 </pre>
 </div>
 </div>
@@ -7436,7 +7436,7 @@ SZLUUxZ8kiRJktRT/x8F99Oi9DA3ZQAAAABJRU5ErkJggg==
 
 
 <div class="output_text output_subarea output_execute_result">
-<pre>&lt;matplotlib.text.Text at 0x2b78e908&gt;</pre>
+<pre>&lt;matplotlib.text.Text at 0x2b4aaf98&gt;</pre>
 </div>
 
 </div>
